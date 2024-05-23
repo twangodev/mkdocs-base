@@ -23,4 +23,4 @@ jobs:
       - name: Sync
         run: pipenv run python sync.py
       - name: GitHub Commit & Push
-        uses: actions-js/push@latest
+        uses: actions-js/push@v1.5
