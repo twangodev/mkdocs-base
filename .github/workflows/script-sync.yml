@@ -6,21 +6,21 @@ on:
   schedule:
     cron: '0 0 * * 0'
 
-  jobs:
-    sync:
-      name: Sync
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-python@v2
-          with:
-            python-version: 3
-            cache: pipenv
-        - name: Install pipenv
-          run: python3 -m pip install --upgrade pip pipenv
-        - name: Install Dependencies
-          run: pipenv sync
-        - name: Sync
-          run: pipenv run python sync.py
-        - name: GitHub Commit & Push
-          uses: actions-js/push
+jobs:
+  sync:
+    name: Sync
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3
+          cache: pipenv
+      - name: Install pipenv
+        run: python3 -m pip install --upgrade pip pipenv
+      - name: Install Dependencies
+        run: pipenv sync
+      - name: Sync
+        run: pipenv run python sync.py
+      - name: GitHub Commit & Push
+        uses: actions-js/push
