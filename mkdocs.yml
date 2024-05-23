@@ -13,9 +13,35 @@ site_description: CHANGEME
 docs_dir: docs
 
 theme:
-  logo: assets/cca.png
-  favicon: assets/favicon.ico
+  logo: CHANGEME
+  favicon: CHANGEME
   custom_dir: overrides
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to system preference
 
 # Your Plugins. Comment out or remove any you don't need.
 plugins:
@@ -25,7 +51,7 @@ plugins:
   - social
   - charts
   - git-committers:
-      repository: twangodev/cca
+      repository: CHANGEME
       branch: main
       token: !ENV ["MKDOCS_GIT_COMMITTERS_APIKEY"]
   - git-revision-date-localized:

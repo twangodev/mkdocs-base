@@ -13,33 +13,6 @@ theme:
     - content.action.view
     - content.tabs.link
 
-  palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      primary: red
-      accent: red
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: red
-      accent: red
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: red
-      accent: red
-      toggle:
-        icon: material/weather-night
-        name: Switch to system preference
-
 markdown_extensions:
   - abbr
   - admonition
@@ -78,15 +51,15 @@ markdown_extensions:
 
 
 extra_javascript:
-  - javascripts/mathjax.js
-  - javascripts/kotlin.js
-  - https://unpkg.com/kotlin-playground@1
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/vega@5
-  - https://cdn.jsdelivr.net/npm/vega-lite@5
-  - https://cdn.jsdelivr.net/npm/vega-embed@6
+  - https://mkdocs.twango.dev/javascripts/mathjax.js
+  - https://mkdocs.twango.dev/javascripts/kotlin.js
+  - https://mkdocs.twango.dev/javascripts/kotlin-playground.js
+  - https://mkdocs.twango.dev/javascripts/polyfill.js
+  - https://mkdocs.twango.dev/javascripts/tex.js
+  - https://mkdocs.twango.dev/javascripts/vega.js
+  - https://mkdocs.twango.dev/javascripts/vega-lite.js
+  - https://mkdocs.twango.dev/javascripts/vega-embed.js
 
 extra_css:
-  - stylesheets/kotlin.css
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - https://mkdocs.twango.dev/css/kotlin.css
+  - https://mkdocs.twango.dev/css/katex.css
